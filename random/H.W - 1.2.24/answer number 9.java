@@ -1,20 +1,18 @@
 import java.util.Random;
 
-public class MaxRandomNumber {
+public class SimpleMaxRandomNumberExample {
     public static void main(String[] args) {
-        Random random = new Random();
-        int maxNumber = 0;
+        Random rnd = new Random();
+        int maxNumber = 0;  // Assume the minimum possible value is 0
 
         for (int i = 0; i < 10; i++) {
-            int randomNumber = random.nextInt(10) + 1; // בחירת מספר אקראי בין 1 ל-10
+            int randomNumber = rnd.nextInt(10) + 1; // Generate a random number between 1 and 10
 
-            System.out.println("Random Number " + (i + 1) + ": " + randomNumber);
+            System.out.println("Generated number: " + randomNumber);
 
-            if (randomNumber > maxNumber) {
-                maxNumber = randomNumber;
-            }
+            maxNumber = Math.max(maxNumber, randomNumber);
         }
 
-        System.out.println("\nThe largest random number is: " + maxNumber);
+        System.out.println("\nThe maximum number is: " + maxNumber);
     }
 }
