@@ -1,16 +1,17 @@
-import java.util.Random;
 
-public class CountSixes {
-    public static void main(String[] args) {
-        Random random = new Random();
-        int countOfSixes = 0;
+import  java.util.* ;
+public class Main
+{
+    public static void main ( String[ ]  args ) {
+        int mone = 0;
 
-        for (int i = 0; i < 50; i++) {
-            int randomNumber = random.nextInt(6) + 1;
-            System.out.print(randomNumber + " ");
-            countOfSixes += (randomNumber == 6) ? 1 : 0;
-        }
+        Random rnd = new Random();
+        for (int i = 1; i <= 50; i++) {
+            int num = 1 + rnd.nextInt(6);
+            System.out.println(num);
+                if (num == 6)
+                    mone++;}
 
-        System.out.println("\nOccurrences of the number 6: " + countOfSixes);
+        System.out.println("number 6 showes  " + mone);
     }
 }
