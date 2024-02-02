@@ -2,22 +2,28 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
-        int sumOfOnes = 0;
-        int sumOfTens = 0;
+        int[] numbers = new int[30];
+        Random rnd = new Random();
 
-        for (int i = 0; i < 30; i++) {
-            int randomNumber = random.nextInt(90) + 10;
-            System.out.print(randomNumber + " ");
+        int sumOnes = 0;
+        int sumTens = 0;
 
-            int onesDigit = randomNumber % 10;
-            int tensDigit = randomNumber / 10 % 10;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = rnd.nextInt(90) + 10;
 
-            sumOfOnes += onesDigit;
-            sumOfTens += tensDigit;
+            int onesDigit = numbers[i] % 10;
+            int tensDigit = numbers[i] / 10;
+
+            sumOnes += onesDigit;
+            sumTens += tensDigit;
         }
 
-        System.out.println("\nSum of ones digits: " + sumOfOnes);
-        System.out.println("Sum of tens digits: " + sumOfTens);
+        System.out.println("Generated numbers:");
+
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\n\nSum of ones digits: " + sumOnes);
+        System.out.println("Sum of tens digits: " + sumTens);
     }
 }
