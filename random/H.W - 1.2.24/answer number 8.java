@@ -1,13 +1,14 @@
 import java.util.Random;
 
-public class RepeatName {
+public class Main   {
     public static void main(String[] args) {
-        Random random = new Random();
-        int randomCount = random.nextInt(5) + 1; // בחירת מספר אקראי בין 1 ל-5
-        String name = "mis"; // השם להצגה
+        Random rnd = new Random();
+        int randomNumber = rnd.nextInt(5) + 1; // Generate a random number between 1 and 5
 
-        for (int i = 0; i < randomCount; i++) {
-            System.out.println(name);
+        String mis = "mis";  // Assuming your first name is "mis"
+
+        for (int i = 0; i < randomNumber; i++) {
+            System.out.println(mis);
         }
     }
 }
