@@ -1,19 +1,25 @@
 import java.util.Random;
 
-public class RandomNumbers {
+public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
-        int countOfTens = 0;
-        int countOfFifties = 0;
+        int[] numbers = new int[10];
+        int count10 = 0;
+        int count50 = 0;
 
-        for (int i = 0; i < 10; i++) {
-            int randomNumber = random.nextInt(41) + 10;
-            System.out.print(randomNumber + " ");
-            countOfTens += (randomNumber == 10) ? 1 : 0;
-            countOfFifties += (randomNumber == 50) ? 1 : 0;
+        Random rnd = new Random();
+
+        for (int i = 0; i < numbers.length; i++) {
+            int index = rnd.nextInt(5);
+            numbers[i] = (index + 1) * 10;
+            System.out.println(numbers[i]);
+            if (numbers[i] == 10) {
+                count10++;
+            } else if (numbers[i] == 50) {
+                count50++;
+            }
         }
 
-        System.out.println("\nOccurrences of the number 10: " + countOfTens);
-        System.out.println("Occurrences of the number 50: " + countOfFifties);
+        System.out.println("Occurrences of 10: " + count10 + " times");
+        System.out.println("Occurrences of 50: " + count50 + " times");
     }
 }
