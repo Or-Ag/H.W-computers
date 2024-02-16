@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int timeInSeconds;
+
+        System.out.println("Enter running times in seconds (0 to end):");
+
+        while (true) {
+            timeInSeconds = scanner.nextInt();
+            if (timeInSeconds == 0) {
+                break;
+            }
+
+            int hours = timeInSeconds / 3600;
+            int remainingSeconds = timeInSeconds % 3600;
+            int minutes = remainingSeconds / 60;
+            int seconds = remainingSeconds % 60;
+
+            System.out.println(timeInSeconds + " seconds = " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.");
+        }
+
+    }
+}
