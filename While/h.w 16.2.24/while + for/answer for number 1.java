@@ -23,3 +23,18 @@ public class Main {
 
     }
 }
+
+
+
+
+
+answers
+105 seconds = 0 hours, 1 minutes, and 45 seconds.
+807 seconds = 0 hours, 13 minutes, and 27 seconds.
+432 seconds = 0 hours, 7 minutes, and 12 seconds.
+4000 seconds = 1 hours, 6 minutes, and 40 seconds.
+5432 seconds = 1 hours, 30 minutes, and 32 seconds.
+12345 seconds = 3 hours, 25 minutes, and 45 seconds.
+55 seconds = 0 hours, 0 minutes, and 55 seconds.
+60 seconds = 0 hours, 1 minutes, and 0 seconds.
+3600 seconds = 1 hours, 0 minutes, and 0 seconds.
