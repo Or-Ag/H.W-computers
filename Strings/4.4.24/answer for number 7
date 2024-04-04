@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a text: ");
+        String text = scanner.nextLine();
+
+        printMiddleCharacter(text);
+
+        scanner.close();
+    }
+
+    public static void printMiddleCharacter(String text) {
+        int length = text.length();
+        if (length % 2 == 0) { // If the length of the string is even
+            int middleIndex = length / 2;
+            char middleChar1 = text.charAt(middleIndex - 1);
+            char middleChar2 = text.charAt(middleIndex);
+            System.out.println("Middle characters: " + middleChar1 + middleChar2);
+        } else { // If the length of the string is odd
+            int middleIndex = length / 2;
+            char middleChar = text.charAt(middleIndex);
+            System.out.println("Middle character: " + middleChar);
+        }
+    }
+}
