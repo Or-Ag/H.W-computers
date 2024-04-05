@@ -1,0 +1,26 @@
+import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the students number");
+        int num = input.nextInt();
+        int count = 0;
+        String str = input.nextLine();
+        for (int i = 0; i<num; i++)
+        {
+            System.out.println("enter your full name:");
+            str = input.nextLine();
+            if (str.indexOf("cohen")>=0)
+            {
+                count++;
+            }
+            System.out.println(count);
+        }
+
+
+    }
+}
